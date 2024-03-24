@@ -5,7 +5,7 @@ body {
 
   h1 {
     text-align: center;
-    font-size: 36px;
+    font-size: 26px;
     margin-top: 50px;
   }
   
@@ -17,6 +17,7 @@ body {
     position: relative;
     text-align: center;
     color: white;
+    margin: -50px;
 }
 .quote {
     position: absolute;
@@ -124,13 +125,13 @@ body {
 
   /* FX Horizontal Ticker Styling */
   .ticker-container {
-  width: 100%;
+  max-width: 100%;
   overflow: hidden;
 }
 .ticker-wrapper {
     font-family: sans-serif;
     font-size: 15px;
-  width: 100%;
+  max-width: 100%;
   padding-left: 100%;
   background-color: transparent;
   }
@@ -139,17 +140,15 @@ body {
   transform: translate3d(0, 0, 0);
   }
   100% {
-  transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-50%, 0, 0);
   }
   }
   .ticker-transition {
   display: inline-block;
   white-space: nowrap;
-  padding-right: 100%;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-name: ticker;
-  animation-duration: 20s;
+  overflow: hidden;
+  display: inline-block;
+  animation: marquee 20s linear infinite;
   }
   .ticker-transition:hover {
   animation-play-state: paused;
@@ -159,6 +158,32 @@ body {
   display: inline-block;
   padding: 20px;
   }
+
+/* Horizontal Streaming FX Rates */
+.wrapper {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: marquee 10s linear infinite;
+}
+
+.marquee p {
+  display: inline-block;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
 
 
   /* Responsive */
