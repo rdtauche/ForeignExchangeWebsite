@@ -316,4 +316,9 @@ body {
       margin-bottom: 50px;
     }
 
+    #logo {
+      width: 300px;
+      padding-bottom: 50px;
+    }
+
   }
