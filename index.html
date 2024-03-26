@@ -18,9 +18,7 @@
     <!-- RT: CDN Link for ZURB Foundation - CSS Framework -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style.css">
-    <link rel="stylesheet" href="index.css">
 <!-- **IMPORTANT** ZURB Foundation css link has to be BEFORE style.css or cannot overwrite -->
-<link rel="stylesheet" href="./assets/reset.css">
 <link rel="stylesheet" href="./assets/style.css">
     <title>FX Trading Book</title>
 </head>
@@ -39,6 +37,7 @@
   </header>
 
 <!-- FX Horizontal Ticker Prices -->
+
 <div class="ticker-wrap" id="ticker">
   <div class="ticker">
   <div class="ticker-transition">
@@ -84,6 +83,8 @@
   </div>
 
 
+  <div id="EURUSD"></div>
+
   <h1>FX Trading Book:  Preview</h1>
 <div class="container">
   <img class="book1" src="./assets/bookPreview1.png" alt="" />
@@ -92,9 +93,8 @@
   <!-- <div class="quote">"Don't be into trends. Don't make fashion own you, but you decide what you are, what you want to express by the way you dress and the way to live." —Gianni Versace</div> -->
 </div>
 
-<br/>
-
 <!-- Customer Review -->
+<h1 class="reviews">What our Readers are Saying:</h1>
 <div class="outerdiv">
   <div class="innerdiv">
     <!-- div1 -->
@@ -104,11 +104,11 @@
           <img src="https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/image-daniel.jpg" alt="">
         </div>
         <div class="detbox">
-          <p class="name">Daniel Clifford</p>
-          <p class="designation">FX Trader </p>
+          <p class="name2">Daniel Clifford</p>
+          <p class="designation2">FX Trader </p>
         </div>
       </div>
-      <div class="review">
+      <div class="review2">
         <h4>This was a fantastic book which provided great detail, depth and real-world examples of the dynamic and fast paced world of FX Trading. Great read!! </h4>
       <p>“An indispensible book for your FX Trading Library”</p>
       <p>⭐⭐⭐⭐⭐</p>
@@ -144,7 +144,7 @@
       </div>
       <div class="review dark">
         <h4>Such a beautiful and well written book. Highly recommended!</h4>
-        <p>“I'm a new entrant into the FOREX world having recently been hired at a major financial institution, this book has expertly prepared me and my first 6-months on the job were a success largely for how well this booked prepared me"</p>
+        <p>“I'm an experienced FOREX professional who noticed this book on one of my new hires desk, she let me review it and I immediately purchased a copy for myself.  What a great book for new entrants and experienced ones!  Besides being beautifully written with captivating images, the content and material are a fantastic reference guide for all those engaged in the FOREX Markets.  Its also a great coffee table book in my office for when im hosting clients or vendors, a great conversational piece of artwork!"</p>
         <p>⭐⭐⭐⭐⭐</p>
       </div>
     </div>
@@ -184,10 +184,9 @@
     </div>
   </div>
 </div>
-<div class="attribution">
-  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a><br>
-  Coded by <a href="https://www.instagram.com/developer_sah/" target="_blank">Rahul Sah</a>.
-</div>
+<br/>
+
+
 
     <!-- Footer PLaceholder from ZURB Foundation -->
 <section class="contact-us-section">
@@ -221,6 +220,8 @@
   </section>
 
 
+  <!-- Ajax jquery  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <!-- RT: CDN Link for ZURB Foundation CSS Framework -->
   <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js" crossorigin="anonymous"></script>
   <!-- RT:  Added link to the jQuery library -->
