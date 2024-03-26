@@ -18,8 +18,9 @@ body {
     text-align: center;
     color: white;
     margin: -50px;
-    flex-direction: column;
-    justify-content: space-around;
+    margin-right: auto;
+    margin-left: auto;
+    width: 1250px;
 }
 .quote {
     position: absolute;
