@@ -30,10 +30,20 @@ body {
     height: 300px;
 }
 
-.book {
+.book1 {
     height: 500px;
     margin: 50px;
     border: 1px solid #050A30;
+}
+.book2 {
+  height: 500px;
+  margin: 50px;
+  border: 1px solid #050A30;
+}
+.book3 {
+  height: 500px;
+  margin: 50px;
+  border: 1px solid #050A30;
 }
 
 .button, .button.disabled, .button.disabled:focus, .button.disabled:hover, .button[disabled], .button[disabled]:focus, .button[disabled]:hover {
@@ -125,6 +135,7 @@ body {
   }
 
   /* FX Horizontal Ticker Styling */
+
   .ticker-container {
   max-width: 100%;
   overflow: hidden;
@@ -150,6 +161,7 @@ body {
   overflow: hidden;
   display: inline-block;
   animation: marquee 20s linear infinite;
+  max-width: 100%;
   }
   .ticker-transition:hover {
   animation-play-state: paused;
@@ -286,8 +298,22 @@ body {
 
   
   @media only screen and (max-width: 1100px) {
-    .book {
-      height: 250px;
+    .book1 {
+      height: 120px;
+      width: 200px;
+      margin-top: 50px;
+    }
+
+    .book2 {
+      height: 120px;
+      width: 200px;
+      margin: 20px;
+    }
+
+    .book3 {
+      height: 120px;
+      width: 200px;
+      margin-bottom: 50px;
     }
 
   }
