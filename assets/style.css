@@ -299,20 +299,20 @@ body {
   
   @media only screen and (max-width: 1100px) {
     .book1 {
-      height: 120px;
-      width: 200px;
+      height: 250px;
+      width: 450px;
       margin-top: 50px;
     }
 
     .book2 {
-      height: 120px;
-      width: 200px;
+      height: 250px;
+      width: 450px;
       margin: 20px;
     }
 
     .book3 {
-      height: 120px;
-      width: 200px;
+      height: 250px;
+      width: 450px;
       margin-bottom: 50px;
     }
 
