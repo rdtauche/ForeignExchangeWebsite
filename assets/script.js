@@ -66,4 +66,7 @@ function getLatest(options) {
 getLatest({base: 'USD'});
 // getLatest({base: 'USD',symbols: 'USD,CAD,GBP'});
 
+  // RT: display day.js todays date
+  var today = dayjs();
+  $("#day").text(today.format("[Today is] MMM D, YYYY [- Current FX Prices:]"));
 
