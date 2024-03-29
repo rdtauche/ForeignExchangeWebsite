@@ -36,12 +36,96 @@
     </ul>
   </header>
 
-  <!-- RT:  Add Day.js functionality to show current date -->
-<p id="day" class="answer"></p>
+  
+  <!-- TradingView Widget BEGIN -->
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text"></span></a></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+      {
+        "symbols": [
+          {
+            "description": "EURUSD",
+            "proName": "OANDA:EURUSD"
+          },
+          {
+            "description": "GBPUSD",
+            "proName": "FX:GBPUSD"
+          },
+          {
+            "description": "USDJPY",
+            "proName": "FX:USDJPY"
+          },
+          {
+            "description": "AUDUSD",
+      "proName": "FX:AUDUSD"
+    },
+    {
+      "description": "USDCAD",
+      "proName": "OANDA:USDCAD"
+    },
+    {
+      "description": "NZDUSD",
+      "proName": "OANDA:NZDUSD"
+    },
+    {
+      "description": "USDCHF",
+      "proName": "OANDA:USDCHF"
+    },
+    {
+      "description": "USDBRL",
+      "proName": "FX_IDC:USDBRL"
+    },
+    {
+      "description": "USDARS",
+      "proName": "FX_IDC:USDARS"
+    },
+    {
+      "description": "USDCOP",
+      "proName": "FX_IDC:USDCOP"
+    },
+    {
+      "description": "USDCLP",
+      "proName": "FX_IDC:USDCLP"
+    },
+    {
+      "description": "USDZAR",
+      "proName": "FX:USDZAR"
+    },
+    {
+      "description": "USDSAR",
+      "proName": "FX_IDC:USDSAR"
+    },
+    {
+      "description": "USDQAR",
+      "proName": "FX_IDC:USDQAR"
+    },
+    {
+      "description": "USDPHP",
+      "proName": "FX_IDC:USDPHP"
+    },
+    {
+      "description": "USDSGD",
+      "proName": "OANDA:USDSGD"
+    }
+  ],
+  "showSymbolLogo": true,
+  "isTransparent": false,
+  "displayMode": "adaptive",
+  "colorTheme": "light",
+  "locale": "en"
+}
+</script>
+</div>
+<!-- TradingView Widget END -->
+
+<!-- RT:  Add Day.js functionality to show current date
+<p id="day" class="answer"></p> -->
+
 
 <!-- FX Horizontal Ticker Prices -->
 
-<div class="ticker-wrap" id="ticker">
+<!-- <div class="ticker-wrap" id="ticker">
   <div class="ticker">
   <div class="ticker-transition">
   <div class="ticker-item" id="EURUSD">EUR/USD</div>
@@ -83,7 +167,7 @@
 
   </div>
   </div>
-  </div>
+  </div> -->
 
 
    <h1>FX Trading Book:  Preview</h1>
