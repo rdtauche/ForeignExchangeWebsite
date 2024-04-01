@@ -70,3 +70,4 @@ getLatest({base: 'USD'});
   var today = dayjs();
   $("#day").text(today.format("[Today is] MMM D, YYYY [- CLICK Current FX Prices:]"));
 
+
