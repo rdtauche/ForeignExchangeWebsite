@@ -628,6 +628,11 @@ a:link,a:active,a:visited,a:hover{
       width: 300px;
       padding-bottom: 80px;
     }
-
+    #aboutUs {
+      width: 300px;
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+    }
 
   }
