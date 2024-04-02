@@ -133,7 +133,7 @@ body {
   height: 250px;
   margin-top: 50px;
   margin-bottom: 100px;
-  background-color: #2b4c5a;
+  background-color: #c5c5f3;
 
 }
 
@@ -152,7 +152,7 @@ body {
 
 .subnav-hero-section {
   text-align: center;
-  background: #2b4c5a;
+  background: #0b0b24;
   background-size: cover;
   position: relative;
   overflow: visible;
@@ -482,10 +482,10 @@ h1 {
 .icon {
   position: absolute;
   width: 100%;
+  margin-top: 30%;
   display: block;
   color: $color-pea;
   font-size: 3em;
-  background: #f1eeee;
   @include transition(all .2s $ease-out-circ);
 }
 #circ {
@@ -568,7 +568,7 @@ h1 {
 
 .contact-us-section {
     padding: 2rem;
-    background: #2b4c5a;
+    background: #0b0b24;
     color: white;
   }
   
