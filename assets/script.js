@@ -71,3 +71,28 @@ getLatest({base: 'USD'});
   $("#day").text(today.format("[Today is] MMM D, YYYY [- CLICK Current FX Prices:]"));
 
 
+// Node Email
+var nodemailer = require('nodemailer');
+
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'ross.tauchert@gmail.com',
+    pass: 'Bear2023!!'
+  }
+});
+
+var mailOptions = {
+  from: 'ross.tauchert@gmail.com',
+  to: 'ross.tauchert@gmail.com',
+  subject: 'Sending Email using Node.js',
+  text: 'That was easy!'
+};
+
+transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});
