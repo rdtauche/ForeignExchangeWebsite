@@ -53,6 +53,9 @@ body {
     margin: 50px;
     border: 1px solid #050A30;
     display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 90px;
 }
 .book2 {
   height: 500px;
@@ -102,6 +105,7 @@ body {
 #wrapper {
   position: relative;
   display: inline-block;
+  height: 40px;
 }
 #reel {
   width: 100vw;
@@ -205,8 +209,12 @@ body {
   background: rgba(254, 254, 254, 0.15);
 }
 
-
-
+/* Chatbot */
+.group.cb-light .group-\[\.cb-light\]\:border-\[\#f1f1f0\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(241 241 240 / var(--tw-border-opacity));
+  background: black;
+}
 
 /* Customer Review */
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
@@ -485,7 +493,7 @@ h1 {
   display: block;
   color: $color-pea;
   font-size: 3em;
-  background: #f1eeee;
+  background: #eaf5ed;
   @include transition(all .2s $ease-out-circ);
 }
 #circ {
@@ -749,11 +757,14 @@ h1 {
       margin-left: auto;
     }
     .book1 {
-      height: 150px;
-      width: 450px;
-      margin: 10px;
-      margin-top: 67px;
-    }
+      height: 500px;
+      margin: 50px;
+      border: 1px solid #050A30;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 90px;
+  }
 
     .book2 {
       height: 150px;
@@ -778,6 +789,17 @@ h1 {
       margin-right: auto;
       margin-left: auto;
       text-align: center;
+    }
+
+    #myVideo {
+      position: relative;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: 100%;
+      height: auto;
+      margin-top: -30px;
     }
 
   }
