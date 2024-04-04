@@ -97,7 +97,7 @@ const transporter = nodemailer.createTransport({
 
 // Route to display the HTML form
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'your-email-template.html')); // Adjust the file path accordingly
+    res.sendFile(path.join(__dirname, 'public', 'index.html')); // Adjust the file path accordingly
 });
 
 // Route to handle form submission
