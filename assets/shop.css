@@ -10,7 +10,7 @@ body {
   }
   
   .navbar {
-    background-color: #050A30;
+    background-color: #2b4c5a;
 }
 
 
@@ -152,7 +152,7 @@ body {
 
 .subnav-hero-section {
   text-align: center;
-  background: #0b0b24;
+  background: #2b4c5a;
   background-size: cover;
   position: relative;
   overflow: visible;
@@ -568,7 +568,7 @@ h1 {
 
 .contact-us-section {
     padding: 2rem;
-    background: #0b0b24;
+    background: #2b4c5a;
     color: white;
   }
   

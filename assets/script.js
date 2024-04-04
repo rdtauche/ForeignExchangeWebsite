@@ -71,28 +71,62 @@ getLatest({base: 'USD'});
   $("#day").text(today.format("[Today is] MMM D, YYYY [- CLICK Current FX Prices:]"));
 
 
-// Node Email
-var nodemailer = require('nodemailer');
+// Node Email --install express, body-parser, nodemailer and multer----------------------
+const express = require('express');
+const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
+const multer = require('multer');
+const path = require('path');
 
-var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'ross.tauchert@gmail.com',
-    pass: 'Bear2023!!'
-  }
+const app = express();
+const upload = multer({ dest: 'uploads/' }); // Configures multer to store uploaded files in the 'uploads' directory
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public'))); // Serve static files like HTML, CSS from 'public' directory
+
+// SMTP configuration for nodemailer
+const transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com', // Replace with your SMTP host
+    port: 465, // Common port for SMTP
+    secure: false, // True for 465, false for other ports
+    auth: {
+        user: 'ross.tauchert@gmail.com', // Your email
+        pass: 'Bear2023!!' // Your email password
+    }
 });
 
-var mailOptions = {
-  from: 'ross.tauchert@gmail.com',
-  to: 'ross.tauchert@gmail.com',
-  subject: 'Sending Email using Node.js',
-  text: 'That was easy!'
-};
+// Route to display the HTML form
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'your-email-template.html')); // Adjust the file path accordingly
+});
 
-transporter.sendMail(mailOptions, function(error, info){
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Email sent: ' + info.response);
-  }
+// Route to handle form submission
+app.post('/send', upload.single('file'), (req, res) => {
+    const { name, email, message } = req.body; // Extract form data
+    const mailOptions = {
+        from: 'you@yourdomain.com', // Sender address
+        to: 'recipient@theirdomain.com', // List of recipients
+        subject: 'New Contact Us Submission', // Subject line
+        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`, // Plain text body
+        attachments: [
+            {
+                filename: req.file.originalname,
+                path: req.file.path
+            }
+        ]
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            return console.log(error);
+        }
+        console.log('Message sent: %s', info.messageId);
+        // Redirect to a success page or send a response back
+        res.send('Email sent successfully!');
+    });
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
