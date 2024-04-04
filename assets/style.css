@@ -493,7 +493,7 @@ h1 {
   display: block;
   color: $color-pea;
   font-size: 3em;
-  background: #eaf5ed;
+  background: lightgray;
   @include transition(all .2s $ease-out-circ);
 }
 #circ {
